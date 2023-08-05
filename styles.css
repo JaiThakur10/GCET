@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nav-logo {
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: orange;
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: transform 0.3s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-links li {
+      margin: 20px 0;
+    }
+  
+    .burger {
+      display: block;
+    }
+  
+    .nav-active {
+      display: flex;
+    }
+  
+    .burger div {
+      background-color: #333;
+    }
+  
+    .nav-active .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .nav-active .line2 {
+      opacity: 0;
+    }
+  
+    .nav-active .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+
+  .fade-in-text h1 {
+    opacity: 0;
+    animation: fadeInAnimation 2s ease forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .slide-in-text h2 {
+    transform: translateX(-100%);
+    animation: slideInAnimation 1.5s ease forwards;
+  }
+  
+  @keyframes slideInAnimation {
+    to {
+      transform: translateX(0);
+    }
+  }
+  .scaling-text h3 {
+    transform: scale(0);
+    animation: scaleAnimation 1.5s ease forwards;
+  }
+  
+  @keyframes scaleAnimation {
+    to {
+      transform: scale(1);
+    }
+  }
+  .typewriter-text p {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnimation 4s steps(30, end) forwards;
+  }
+  
+  @keyframes typingAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+      
+  .rotate-text h4 {
+    transform: rotateY(180deg);
+    animation: rotateAnimation 2s ease-in-out forwards;
+  }
+  
+  @keyframes rotateAnimation {
+    from {
+      transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateY(0);
+    }
+  }
+  
+  
